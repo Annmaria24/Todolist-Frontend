@@ -29,7 +29,7 @@ export default function List() {
         <button type="submit" id="add-btn">Add</button>
         </form>
       </div>
-    {/* <Listing/> */}
+    <Listing/>
     </div>
   );
 }

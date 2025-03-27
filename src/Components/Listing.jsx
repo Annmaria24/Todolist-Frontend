@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-const List = () => {
+// import './Listing.css';
+const Listing = () => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
@@ -19,18 +19,24 @@ const List = () => {
 
     return (
         <div>
-            <h2>To Do List</h2>
+          <h2>To-Do List</h2>
+          <ul className="todo-list">
             {properties.length === 0 ? (
-                <p>No properties found.</p>
+              <p>No tasks found.</p>
             ) : (
-                properties.map((property, index) => (
-                    <div key={index} className="card">
-                        <p><strong>To Do:</strong> ${property.entry}</p>
-                    </div>
-                ))
-            )} 
+              properties.map((property, index) => (
+                <li key={index} className="todo-item">
+                  <span className="todo-text">{property.entry}</span>
+                  <div className="todo-actions">
+                    <button className="edit-btn">Edit</button>
+                    <button className="delete-btn">Delete</button>
+                  </div>
+                </li>
+              ))
+            )}
+          </ul>
         </div>
-    );
-};
+      );
+    };
 
 export default Listing;
