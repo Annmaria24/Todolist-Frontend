@@ -46,7 +46,7 @@ const Listing = () => {
     
     const handleDeleteClick = async (id) => {
       try {
-        await axios.delete(`https://todolist-backend-i4nj.onrender.com/${id}`);
+        await axios.delete(`https://todolist-backend-i4nj.onrender.com/itemInserting/${id}`);
         fetchProperties();
       } catch (error) {
         console.error("Error deleting task:", error);
