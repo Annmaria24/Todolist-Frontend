@@ -15,7 +15,7 @@ const Listing = () => {
 
     const fetchProperties = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/itemInserting");
+            const response = await axios.get("https://todolist-backend-i4nj.onrender.com/itemInserting");
             setProperties(response.data);
         } catch (error) {
             console.error("Error fetching properties:", error);
@@ -34,7 +34,7 @@ const Listing = () => {
     
     const handleSaveClick = async (id) => {
       try {
-        await axios.put(`http://localhost:3000/itemInserting/${id}`, {
+        await axios.put(`https://todolist-backend-i4nj.onrender.com/itemInserting/${id}`, {
           entry: editedText,
         });
         await fetchProperties();
@@ -46,7 +46,7 @@ const Listing = () => {
     
     const handleDeleteClick = async (id) => {
       try {
-        await axios.delete(`http://localhost:3000/itemInserting/${id}`);
+        await axios.delete(`https://todolist-backend-i4nj.onrender.com/${id}`);
         fetchProperties();
       } catch (error) {
         console.error("Error deleting task:", error);

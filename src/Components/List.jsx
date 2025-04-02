@@ -14,7 +14,7 @@ export default function List() {
   const handleSubmit = async (e) =>{
     e.preventDefault()
     try{
-      await axios.post("http://localhost:3000/itemInserting", property)
+      await axios.post("https://todolist-backend-i4nj.onrender.com/itemInserting", property)
       alert("Property added successfully")
     }catch(error){
       alert("Failed to add propoerty")
