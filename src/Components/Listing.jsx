@@ -9,7 +9,7 @@ const Listing = () => {
 
     useEffect(() => {
       fetchProperties();
-    }, []);
+    });
     
   
 
